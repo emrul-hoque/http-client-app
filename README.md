@@ -1,7 +1,7 @@
 # HTTP Client App
 The purpose of this project is to play with the HttpClient class.
 
-## Task:
+## Tasks:
 - [] Make an HTTP call (read a website)
 - [] Serialization 
 - [] Deserialization
