@@ -16,6 +16,8 @@ HttpClient client = new();
 
 client.BaseAddress = new Uri("http://api.weatherstack.com/");
 
+string API_KEY = "";
+
 HttpResponseMessage response = await client.GetAsync($"/current?access_key={API_KEY}&query=dhaka");
 
 // TODO: We want to read this API: https://jsonplaceholder.typicode.com/users
