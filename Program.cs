@@ -5,7 +5,7 @@ using System.Text.Json;
 /*
 **********************************************************************************************
 * Weather API
-* http://api.weatherstack.com/current?access_key=fe65220b9529a3245053e8d3f2356e63&query=dhaka    
+* http://api.weatherstack.com/current?access_key={API_KEY}&query=dhaka   
 **********************************************************************************************
 * USER API:
 * https://jsonplaceholder.typicode.com/users
