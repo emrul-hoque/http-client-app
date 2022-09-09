@@ -4,7 +4,7 @@ namespace Demo.App
     using Demo.App.Models.UserApi;
     using Demo.App.Models.WeatherApi;
 
-    public static class MyUtil
+    public static class ApiResponseHandler
     {
         public static void OutputUserResponse<T>(string response)
         {

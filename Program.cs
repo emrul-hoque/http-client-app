@@ -31,7 +31,7 @@ try
         string result = await response.Content.ReadAsStringAsync();
         //Console.WriteLine(result);
         // File.WriteAllText( Path.Combine("./MyFolder", "MyWebPage.txt"), result);        
-        MyUtil.OutputWeatherReponse(result);
+        ApiResponseHandler.OutputWeatherReponse(result);
     }
     else
     {
