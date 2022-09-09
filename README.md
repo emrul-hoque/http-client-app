@@ -2,11 +2,11 @@
 The purpose of this project is to play with the HttpClient class.
 
 ## Tasks:
-- [] Make an HTTP call (read a website)
-- [] Serialization 
-- [] Deserialization
-- [] Make an API call (read an API endpoint)
-- [] Deserialize response
+- [x] Make an HTTP call (read a website)
+- [x] Serialization 
+- [x] Deserialization
+- [x] Make an API call (read an API endpoint)
+- [x] Deserialize response
 
 ---
 ## Links

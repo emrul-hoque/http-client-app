@@ -1,6 +1,8 @@
 namespace Demo.App
 {
     using System.Text.Json;
+    using Demo.App.Models.UserApi;
+    using Demo.App.Models.WeatherApi;
 
     public static class MyUtil
     {
@@ -22,9 +24,21 @@ namespace Demo.App
 
         public static void OutputWeatherReponse(string response)
         {
-            Console.WriteLine(response);
-            WeatherRoot weather = JsonSerializer.Deserialize<WeatherRoot>(response);
-             Console.WriteLine(">>>   " + weather.current.temperature);
+            Console.WriteLine("\n" + response + "\n");
+
+            WeatherRoot? weather = JsonSerializer.Deserialize<WeatherRoot>(response);
+
+            if(weather is not null)
+            {
+                Console.WriteLine($">>> Location: {weather.Location?.Name}, Temperature: {weather.Current?.Temperature} with humidity {weather.Current?.Humidity} at {weather.Location?.LocalTime}");
+
+                var weatherDescriptions = weather.Current?.WeatherDescriptions ?? new();
+
+                foreach(var d in weatherDescriptions)
+                {
+                    Console.WriteLine($">>>>  {d}");
+                }                
+            }            
         }
     }
 }

@@ -2,10 +2,12 @@
 using System.Text.Json;
 
 
+Console.WriteLine($"\n[{DateTime.Now}] {nameof(Program)} started");
+
 /*
 **********************************************************************************************
 * Weather API
-* http://api.weatherstack.com/current?access_key=fe65220b9529a3245053e8d3f2356e63&query=dhaka    
+* http://api.weatherstack.com/current?access_key=<API_KEY>&query=dhaka    
 **********************************************************************************************
 * USER API:
 * https://jsonplaceholder.typicode.com/users
@@ -26,7 +28,7 @@ try
 {
     if (response.IsSuccessStatusCode)
     {
-          string result = await response.Content.ReadAsStringAsync();
+        string result = await response.Content.ReadAsStringAsync();
         //Console.WriteLine(result);
         // File.WriteAllText( Path.Combine("./MyFolder", "MyWebPage.txt"), result);        
         MyUtil.OutputWeatherReponse(result);
@@ -39,7 +41,6 @@ try
 catch (HttpRequestException e)
 {
     Console.WriteLine("Message :{0} ", e.Message);
-
 }
 catch (Exception e)
 {
@@ -47,7 +48,5 @@ catch (Exception e)
 }
 finally
 {
-
-    Console.WriteLine("Finally - Done.");
+    Console.WriteLine($"\n[{DateTime.Now}] {nameof(Program)} completed\n");
 }
-

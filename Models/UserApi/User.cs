@@ -1,4 +1,4 @@
-namespace Demo.App
+namespace Demo.App.Models.UserApi
 {
     using System.Text.Json.Serialization;
 
